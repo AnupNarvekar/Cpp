@@ -16,7 +16,7 @@ int main()
 
     cout << s1.size() << endl;
 
-    for(int i=0; i != s1.top(); i++)
+    while (s1.empty() == false)
     {
         cout << s1.top() << "   ";
         s1.pop();
