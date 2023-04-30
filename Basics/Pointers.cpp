@@ -25,7 +25,10 @@ int main(){
     int* bPtr = &b; // bPtr <-- address of b
 
     cout << "a + b by val: " << addByValue(a, b) << endl; // 15
-    cout << "a + b by ref -> pointer: " << addUsingPointers(aPtr, bPtr) << endl; // 15
     cout << "a + b by ref -> reference: " << addUsingReference(a, b) << endl; // 15
+
+    cout << "a + b by ref -> pointer: " << addUsingPointers(aPtr, bPtr) << endl; // 15
+    // OR
+    cout << "a + b by ref -> pointer: " << addUsingPointers(&a, &b) << endl; // 15 | Can also pass the address directly without creating a pointer variable
     
 }
