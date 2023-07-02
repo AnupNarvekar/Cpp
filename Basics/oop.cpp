@@ -5,6 +5,7 @@ using namespace std;
 
 class employee
 {
+    // Private by default
     string fName;
     string lName;
     int eNum;
@@ -46,7 +47,7 @@ int main()
     e1.setName("Anup", "Narvekar");
     e1.setEnum(48);
 
-    cout << e1.getName() << endl;
-    cout << e2.getName() << endl;
+    cout << "name: " << e1.getName() << " eNum: " << e1.getEnum() << endl;
+    cout << "name: " << e2.getName() << " eNum: " << e2.getEnum() << endl;
 
 }
