@@ -1,6 +1,12 @@
 #include<iostream>
 using namespace std;
 
+class Person{
+    public:
+    string name;
+    int age;
+};
+
 void incrementByVal(int num){
     ++num;
 }
@@ -88,6 +94,17 @@ int main(){
     cout << "*lNamePtr: " << *lNamePtr << endl << endl; // value of lName through lNamePtr pointer
 
     // --------------------------------------------------------------------------------------------------
+
+    // Dot (.) vs ->
+    Person p1 = {"anup", 24};
+    cout << "p1.name: " << p1.name << "\tp1.age: " << p1.age << endl;
+
+    Person* p1Ptr = &p1;
+    cout << "(*p1Ptr).name: " << (*p1Ptr).name << "\t(*p1Ptr).name: " << (*p1Ptr).name << endl;
+    // OR   (Both are same)
+    cout << "p1Ptr->name: " << p1Ptr->name << "\tp1Ptr->age: " << p1Ptr->age << endl;
+
+
 
 
 }
