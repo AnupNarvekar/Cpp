@@ -9,8 +9,10 @@ void incrementByPointerRef(int* num){
     ++*num;
 }
 
-void incrementByRef(int& num){
-    ++num;
+// If the parameter is made a constant referance (const int& num), it ensures that
+// the original value can't be updated via the referance variable num
+void incrementByRef(int& num) { 
+    ++num; 
 }
 
 int main(){
@@ -59,7 +61,8 @@ int main(){
     int* arrPtr = arr;  // store address of arr[0] in arrPtr
     cout << "arrPtr: " << arrPtr << endl;  // address of arrPtr
     cout << "*arrPtr: " << *arrPtr << endl << endl;  // value of arr[0]
-    
+
+    // --------------------------------------------------------------------------------------------------
 
     // Pointers and character
     // In C and C++, a string is represented as a null-terminated character array
@@ -75,6 +78,7 @@ int main(){
     cout << "fNamePtr: " << fNamePtr << endl; // "anup"
     cout << "*fNamePtr: " << *fNamePtr << endl << endl; // "a"
 
+    // --------------------------------------------------------------------------------------------------
 
     // pointer and string
     string lName = "narvekar";
@@ -82,5 +86,8 @@ int main(){
 
     cout << "lNamePtr: " << lNamePtr << endl; // Address of lName
     cout << "*lNamePtr: " << *lNamePtr << endl << endl; // value of lName through lNamePtr pointer
+
+    // --------------------------------------------------------------------------------------------------
+
 
 }
